@@ -1,0 +1,17 @@
+{
+    "telegramToken": "8528010549:AAF7nQQAOBc37IfpzU2rpE-BWrzQyQff76I",
+    "influx": {
+        "host": "localhost",
+        "port": 8086,
+        "db": "base_building",
+        "measurement": "bms_data",
+        "username": "admin",
+        "password": "admin123"
+    },
+    "factors": {
+        "PE_GAS": 1.00,
+        "PE_ELEC": 2.17,
+        "COP_H": 0.98,
+        "EER_C": 5.4
+    }
+}
