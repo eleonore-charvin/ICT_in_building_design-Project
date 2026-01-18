@@ -12,6 +12,13 @@ FROM "simulation_observations"
 WHERE $timeFilter AND "name" =~ /^ShadeStatus_Zone(1_Wall[289]|2_Wall2|2_wall3|4_Wall2)$/
 GROUP BY time($__interval), "name" fill(previous)
 
+# Shading action
+
+SELECT last("value") 
+FROM "simulation_actions" 
+WHERE $timeFilter AND "name" =~ /^Zona(1_wall[289]|2_wall[23]|4_wall2)_shade_FMU$/
+GROUP BY time($__interval), "name" fill(previous)
+
 # Electricity
 
 SELECT last("value") 
